@@ -1,7 +1,7 @@
 /*Joaquin ElBitar
 1.	Para el departamento de facturación:
 A.	Ingresar tres precios de productos y mostrar la suma de los mismos.
-B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
+B.	Ingresar tres precios de productos y mostrar el promedioFinal de los mismos.
 C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
 function Sumar () 
@@ -10,54 +10,69 @@ function Sumar ()
     let productoDos;
     let productoTres;
     let mensaje;
+    let suma;
 
-//Encontrar el ID 
-    productoUno = document.getElementById("txtIdPrecioUno").value; 
+//Solo en una sola linea de codigopido el numero y lo parseo 
+    productoUno = parseInt(document.getElementById("txtIdPrecioUno").value); 
 
-    productoDos = document.getElementById("txtIdPrecioDos").value;
+    productoDos = parseInt(document.getElementById("txtIdPrecioDos").value);
 
-    productoTres = document.getElementById("txtIdPrecioTres").value;
+    productoTres = parseInt(document.getElementById("txtIdPrecioTres").value);
 
-//Parsear los numero
-    productoUno = parseInt(productoUno); 
-
-    productoDos = parseInt(productoDos);
-
-    productoTres = parseInt(productoTres);
-
+    suma = productoUno + productoDos +productoTres
  //Asignar ecuacion y mensaje
-    mensaje = "La Suma De Los Productos Es " + (productoUno + productoDos + productoTres);
+    mensaje = "La Suma De Los Productos Es " + suma;
 
-    alert(mensaje);
+    console.log(mensaje);
 
 }
 
 function Promedio () 
 {
+    let productoUno; 
+    let productoDos;
+    let productoTres;
+    let mensaje;
+    let suma;
+    let promedioFinal;
 
+    productoUno = parseInt(document.getElementById("txtIdPrecioUno").value); 
+
+    productoDos = parseInt(document.getElementById("txtIdPrecioDos").value);
+
+    productoTres = parseInt(document.getElementById("txtIdPrecioTres").value);
+
+    suma = productoUno + productoDos + productoTres;
+
+    promedioFinal = suma/3;
+
+    mensaje = "El Promedio Es " + promedioFinal;
+    
+    console.log(mensaje);
 }
 function PrecioFinal () 
 {
-	let productoUno; //Declaracion de variables
+    let productoUno; 
     let productoDos;
     let productoTres;
-    let ecuacion;
+    let mensaje;
+    let suma;
+    let IVA;
+    let precioFinal;
+    
+    productoUno = parseInt(document.getElementById("txtIdPrecioUno").value); 
 
-//Encontrar el ID 
-    productoUno = document.getElementById("txtIdPrecioUno").value; 
+    productoDos = parseInt(document.getElementById("txtIdPrecioDos").value);
 
-    productoDos = document.getElementById("txtIdPrecioDos").value;
+    productoTres = parseInt(document.getElementById("txtIdPrecioTres").value);
+    
+    IVA = 21;
+    
+    suma = productoUno + productoDos + productoTres;
 
-    productoTres = document.getElementById("txtIdPrecioTres").value;
+    precioFinal = suma + suma * IVA / 100;
 
-//Parsear los numero
-    productoUno = parseInt(productoUno); 
+    mensaje= "El Precio Final Del Producto Es " + precioFinal;
 
-    productoDos = parseInt(productoDos);
-
-    productoTres = parseInt(productoTres);
-
-    mensaje = "El Precio Final Es " + (productoUno + productoDos + productoTres)*1.21;
-
-    alert(mensaje);
+    console.log(mensaje);
 }

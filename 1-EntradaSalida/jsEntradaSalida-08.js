@@ -23,3 +23,54 @@ function SacarResto()
 
 	alert(mensaje);
 }
+
+/*Joaquin ElBitar
+Ejercicio 8.bis: Ingresar dos numeros por id
+Se pide:
+mostrar por alert:
+a) La suma de los dos numeros
+b) El promedio de los numeros
+c) El resto de los numeros (el primero en modulo del segundo)*/
+
+{
+let numUno;
+let numDos;
+let suma;
+let mensaje;
+let promedio;
+
+numUno = document.getElementById("txtIdNumeroDividendo").value; 
+
+numDos = document.getElementById("txtIdNumeroDivisor").value; 
+
+numUno = parseInt(numUno);
+
+numDos = parseInt(numDos);
+
+suma = numUno + numDos;
+
+mensaje = "La Suma Es " + suma;
+
+alert(mensaje);
+
+promedio = suma/2;
+
+mensaje = "El Promedio Es: " + promedio;
+
+alert(mensaje);
+
+modulo = numUno % numDos;
+
+mensaje = "El Modulo Es: " + modulo;
+
+alert(mensaje);
+
+
+
+
+
+
+
+
+
+}
