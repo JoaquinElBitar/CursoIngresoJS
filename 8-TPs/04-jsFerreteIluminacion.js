@@ -27,7 +27,7 @@ function CalcularPrecio ()
     if(lamparita <=6 )
     {
         mensaje = "El monto final es " + montoFinal
-        alert(mensaje)
+        document.getElementById("txtIdprecioDescuento").value = mensaje;
     }
 }
 
@@ -44,19 +44,50 @@ function CalcularPrecio ()
     lamparita = parseInt(document.getElementById("txtIdCantidad").value);
     argLuz = 40/100;
     monto = lamparita * precio;
-    montoFinal = monto * argLuz;
     
 
     
-    if(lamparita <=5 )
+    if(lamparita ==5 )
     {
         mensaje = "El monto final es " + (monto - monto *argLuz);
-        alert(mensaje);
-    }else if(lamparita <=4)
+        document.getElementById("txtIdprecioDescuento").value = mensaje;
+    }else if(lamparita ==4)
     {
         descuento = 30/100;
         mensaje = "El monto final es " + (monto - monto * descuento);
-        alert(mensaje);
+        document.getElementById("txtIdprecioDescuento").value = mensaje;
     }
 }
 
+function CalcularPrecio ()
+{
+    let lamparita;
+    let mensaje; 
+    let precio; 
+    let monto;
+    let felipeLamp;
+    let argLuz;
+    let descuento;
+
+    precio = 35;
+    argLuz = 25/100;
+    felipeLamp = 25/100;
+    descuento = 20/100;
+    lamparita = parseInt(document.getElementById("txtIdCantidad").value);
+    monto = lamparita * precio;
+
+    if(lamparita ==4 )
+    {
+        mensaje = "El monto final es " + (monto - monto * argLuz)
+        console.log(mensaje)
+    }else if
+
+
+
+
+
+
+
+
+
+}
