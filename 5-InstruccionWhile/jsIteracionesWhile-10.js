@@ -13,17 +13,17 @@ hasta que el usuario quiera, mostrar:
 function mostrar()
 {
 	//declarar contadores y variables 
-	var respuesta;
-	var numeroIngresado;
-	var sumaNegativos=0;
+	let respuesta;
+	let numeroIngresado;
+	let sumaNegativos=0;
 
 	respuesta="si";
 
 	while(respuesta=="si")
 	{
-		
-		respuesta=prompt("desea continuar?");
+		while(isNaN(numeroIngresado))
+		respuesta=prompt("Desea continuar? 'Si' o 'No'");
 	}//fin del while
 
-	document.write("la suma de negativos es :"+sumaNegativos);
+	console.log("La suma de negativos es :"+sumaNegativos);
 }//FIN DE LA FUNCIÓN
