@@ -15,7 +15,7 @@ function Sumar ()
     let mensaje;
     let suma;
 
-//Solo en una sola linea de codigopido el numero y lo parseo 
+//Solo en una sola linea de codigo pido el numero y lo parseo 
     productoUno = parseInt(document.getElementById("txtIdPrecioUno").value); 
 
     productoDos = parseInt(document.getElementById("txtIdPrecioDos").value);

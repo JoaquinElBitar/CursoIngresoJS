@@ -1,4 +1,4 @@
-/*
+/*Joaquin ElBitar
 Al presionar el botón pedir  números  hasta que el USUARIO QUIERA 
 e informar la suma acumulada y el promedio.
 */
@@ -7,18 +7,16 @@ function mostrar()
 	let contador;
 	let acumulador;
 	let respuesta;
-	//let i;
 	let numeroIngresado;
 	let mensaje;
 
-	//i = 0;
+
 	contador = 0;
 	acumulador = 0;
 	respuesta='si';
 
 	while(respuesta == "si" || respuesta == "Si" || respuesta == "SI")
 	{
-		//i = i + 1; 
 		numeroIngresado = parseInt(prompt("Ingrese un numero"));
 		while(isNaN(numeroIngresado))
 		{
@@ -27,7 +25,7 @@ function mostrar()
 		contador = contador + 1;
 		acumulador = acumulador + numeroIngresado;
 
-	respuesta=prompt("Desea continuar? Si");
+	respuesta=prompt("Desea continuar? 'Si' o 'No'");
 
 
 	}//FIN DEL SWITCH

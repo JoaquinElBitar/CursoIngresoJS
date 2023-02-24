@@ -1,4 +1,4 @@
-/*
+/*Joaquin ElBitar
 Al presionar el botón pedir  números  
 hasta que el usuario quiera, mostrar:
 1-Suma de los negativos.
@@ -23,6 +23,9 @@ function mostrar()
 	{
 		while(isNaN(numeroIngresado))
 		respuesta=prompt("Desea continuar? 'Si' o 'No'");
+
+
+
 	}//fin del while
 
 	console.log("La suma de negativos es :"+sumaNegativos);

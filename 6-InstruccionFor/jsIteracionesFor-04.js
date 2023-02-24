@@ -8,7 +8,7 @@ function mostrar()
 
 	dato = prompt("Ingrese un dato")
 
-	for(i = dato; i++)
+	for(i = dato; i++;)
 
 
 
