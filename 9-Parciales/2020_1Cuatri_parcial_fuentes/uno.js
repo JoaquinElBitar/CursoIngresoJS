@@ -42,10 +42,10 @@ function mostrar()
 	banderaDelAlcohol = true
 
 	//Inicio el for
-	for (i = 0; i < 5; i++)
+	for (let i = 0; i < 5; i++)
 	{
 	//Pedir datos por promt
-	tipoProducto = prompt("Ingrese el producto deseado. barbijo. jabon o alcohol");
+		tipoProducto = prompt("Ingrese el producto deseado. barbijo. jabon o alcohol");
 	//Valido con while
 	// while(tipoProducto != barbijo && tipoProducto != jabon && tipoProducto != alcohol)
 	// {
@@ -54,49 +54,48 @@ function mostrar()
 	//Parsear producto
 		precioProducto = parseInt(prompt("Ingrese un precio entre '100 y 300'"));
 	//Valido con while
-	while(isNaN(precioProducto) || precioProducto < 100 || precioProducto > 300)
-	{
-		precioProducto = parseInt(prompt("Error ingrese un precio valido"));
-	}
-	cantidadProdcuto = parseInt(prompt("Ingrese la cantidad deseada"));
-	while(isNaN(cantidadProdcuto) || cantidadProdcuto < 1 || cantidadProdcuto > 1000)
-	{
-		cantidadProdcuto = parseInt(prompt("Error ingrese una cantidad valida"));
-	}
-	//Vuelvo a pedir datos por promt 
-	marca = prompt("Ingrese una marca");
-	while(!isNaN(marca))
-	{
-		marca = prompt("Error: Ingrese una marca valida");
-	}
-
-	fabricante = prompt("Ingrese un fabricante");
-	while(!isNaN(fabricante))
-	{
-		fabricante = prompt("Error Ingrese un fabricante valido");
-	}
-	switch(tipoProducto)
-	{
-		case "barbijo":
-			contadorBarbijo = contadorBarbijo + 1;
-			acumuladorBarbijo = acumuladorBarbijo + cantidadProdcuto;
-			break;
-		case "jabon":
-			contadorJabon = contadorJabon + 1;
-			acumuladorJabon = acumuladorJabon + cantidadProdcuto;
-			break;
-		//a) Del más barato de los alcohol, la cantidad de unidades y el fabricante
-		case "alcohol":
-	}		if(banderaDelAlcohol == true || precioProducto < precioAlcoholMasBarato)
+			while(isNaN(precioProducto) || precioProducto < 100 || precioProducto > 300)
 			{
-				precioAlcoholMasBarato = precioProducto;
-				cantidadAlcoholMasBarato = acumuladorAlcohol;
-				fabricanteAlcoholMasBarato = fabricante;
-				banderaDelAlcohol = false;
+				precioProducto = parseInt(prompt("Error ingrese un precio valido"));
 			}
-			contadorAlcohol = contadorAlcohol + 1;
-			acumuladorAlcohol = acumuladorAlcohol + cantidadProdcuto;
-			break;
+		cantidadProdcuto = parseInt(prompt("Ingrese la cantidad deseada"));
+			while(isNaN(cantidadProdcuto) || cantidadProdcuto < 1 || cantidadProdcuto > 1000)
+			{
+				cantidadProdcuto = parseInt(prompt("Error ingrese una cantidad valida"));
+			}
+	//Vuelvo a pedir datos por promt 
+		marca = prompt("Ingrese una marca");
+			while(!isNaN(marca))
+			{
+				marca = prompt("Error: Ingrese una marca valida");
+			}
+		fabricante = prompt("Ingrese un fabricante");
+			while(!isNaN(fabricante))
+			{
+				fabricante = prompt("Error Ingrese un fabricante valido");
+			}
+		switch(tipoProducto)
+			{
+				case "barbijo":
+					contadorBarbijo = contadorBarbijo + 1;
+					acumuladorBarbijo = acumuladorBarbijo + cantidadProdcuto;
+					break;
+				case "jabon":
+					contadorJabon = contadorJabon + 1;
+					acumuladorJabon = acumuladorJabon + cantidadProdcuto;
+					break;
+				//a) Del más barato de los alcohol, la cantidad de unidades y el fabricante
+				case "alcohol":
+			}if(banderaDelAlcohol == true || precioProducto < precioAlcoholMasBarato)
+				{
+					precioAlcoholMasBarato = precioProducto;
+					cantidadAlcoholMasBarato = acumuladorAlcohol;
+					fabricanteAlcoholMasBarato = fabricante;
+					banderaDelAlcohol = false;
+				}
+				contadorAlcohol = contadorAlcohol + 1;
+				acumuladorAlcohol = acumuladorAlcohol + cantidadProdcuto;
+				break;
 
 	}//FIN FOR
 	
@@ -137,4 +136,4 @@ function mostrar()
 	console.log("Cantidad total de jabon: " + acumuladorJabon);
 
 
-}
+}//FIN FUNCION
