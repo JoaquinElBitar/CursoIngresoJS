@@ -32,7 +32,7 @@ function mostrar()
     contadorHombresViudos = 0;
     contadorMayoresViudos = 0;
     contadorTerceraEdad = 0;
-    banderaTemperatura == true;
+    banderaTemperatura = true;
 
 
     while(respuesta == "si" || respuesta == "Si")
@@ -90,19 +90,22 @@ function mostrar()
                     {
                         contadorHombresViudos = contadorHombresViudos+ 1;
                     }
+                    break;
             }
     //d) cuantas personas de la tercera edad( mas de 60 años) , tienen mas de 38 de temperatura
     if(edadIngresada >= 60 || temperaturaIngresada >= 38)
             {
                 contadorTerceraEdad = contadorTerceraEdad + 1;
             }
+    
+    }//FIN WHILE
+
     //e) El promedio de edad entre los hombres solteros.
     if(sexoIngresado == "m" || sexoIngresado == "M")
             {
-                promedioEdadHombresSolteros = acumuladorEdadHombresSolteros / edadIngresada;
+                promedioEdadHombresSolteros = acumuladorEdadHombresSolteros / contadorHombresSolteros;
             }
-    }//FIN WHILE
-    
+
     console.log(personaConMasTemperatura + " tiene una temperatura de " + temperaturaMasAlta);
     console.log("Hay " + contadorMayoresViudos + " mayores de edad viudos");
     console.log("La cantidad de hombres solteros es de " + contadorHombresSolteros + " y de hombres viudos es de " + contadorHombresViudos);

@@ -3,12 +3,16 @@ al presionar el botón repetir hasta que utilizamos 'BREAK'.
 */
 function mostrar()
 {
-	let dato;
-	let i;
+	let repetir
 
-	dato = prompt("Ingrese un dato")
-
-	for(i = dato; i++;)
+	for (;;)
+	{
+		repetir = prompt("Para cortar ingrese 'BREAK' ");
+		if (repetir == "BREAK")
+		{
+			break; 
+		}
+	}
 
 
 

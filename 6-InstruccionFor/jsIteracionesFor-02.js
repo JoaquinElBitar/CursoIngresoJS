@@ -8,6 +8,9 @@ function mostrar()
 
 //Inicio, Condicion, Contador
 	for(i = 10; i > 0; i--)
+	{
+		document.write(i);
+	}
 //Muestro
-	document.write(i);
+	
 }

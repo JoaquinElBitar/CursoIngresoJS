@@ -15,7 +15,8 @@ function mostrar()
 	numeroIngresado=parent(prompt("Ingrese un numero"));
 
 	//Inicialziar for
-	for (let i = 0; i < numeroIngresado; i++){
+	for (let i = 0; i < numeroIngresado; i++)
+	{
 		if(numeroIngresado % i == 0){
 			contadorDivisores = contadorDivisores + 1;
 		}

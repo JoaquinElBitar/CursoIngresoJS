@@ -3,15 +3,35 @@ al presionar el botón pedir un número. Informar si el numero es PRIMO o no.
 */
 function mostrar()
 {
-	//Declaro variables
+	let i;
+	let numeroIngresado; 
+	let contadorDivisores; 
+	let primo;
+	let noPrimo;
 
-	//Inicio variables
+	contadorDivisores = 0; 
 
-	//Pedir un numero 
-	//Validar numero
+	numeroIngresado = parseInt(prompt("Ingrese un numero"));
+		while(isNaN(numeroIngresado))
+		{
+			numeroIngresado = parseInt(prompt("Error Ingrese un numero valido"));
+		}
 
-	//Inicio For
+	for( i = 2; i < numeroIngresado; i++)
+	{
+		if(numeroIngresado % i == 0)
+		{
+			contadorDivisores = contadorDivisores +1; 
+		}
+		if(contadorDivisores != 0 || numeroIngresado <= 1)
+		{
+			numeroIngresado = noPrimo;
+		}else 
+		{	
+			numeroIngresado = primo;
+		}
+	}//FIN FOR
 
-	alert("ok");
-
+	alert(noPrimo + " no es primo"); 
+	alert(primo + " es primo"); 
 }//FIN DE LA FUNCIÓN
