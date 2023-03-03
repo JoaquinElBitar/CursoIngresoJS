@@ -94,14 +94,16 @@ function mostrar()
 
     
 // d) Si hay mas del 50% de los pasajeros que pertenecen a PAMI, el precio final tiene un descuento del 25%, que solo mostramos si corresponde.
-    switch(obraSocial)
+    switch(obraSocial) 
     {
         case "PAMI":
             if(obraSocial == "PAMI" && contadorPasajeros > contadorPasajeros)
             {
-                precioViajeDescuento = precioViajeTotal * descuentoPami;
+                precioViajeDescuento = precioViajeTotal * descuentoPami;//INICIAR CONTADOR EN 0
             }
     }
+//porcentajePami = contadorPasajerosPami * 100 / contadorTotalPasajeros;
+
     console.log("La cantidad de personas con PAMI de mas de 60 años es " + nombre)
     console.log("La temperatura de la mujer con osde mas joven es " + temperaturaMujerMasJoven + " y su nombre es " + nombreMujerMasJoven);
     console.log("El precio total del viaje es " + precioViajeTotal);
